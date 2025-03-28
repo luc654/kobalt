@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/output.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <title>Document</title>
+</head>
+
+<body class="flex flex-col bg-zinc-50 w-full h-[150rem]">
+    <header class="flex justify-between py-5" style="box-shadow: rgba(149, 157, 165, 0.2)0px 8px 24px;">
+        <div class="pl-2 ">
+            KOBALT
+        </div>
+        <div class="flex w-5/12 justify-around">
+            <a href="#">About</a>
+            <a href="#">Code</a>
+            <a href="#">About</a>
+        </div>
+    </header>
+
+    <main class="mt-20 flex items-center  flex-col ">
+
+        <!-- Search bar -->
+        <!--  -->
+        <div class="w-4/5 h-16 bg-white rounded-full border-2 border-blue-600 flex justify-between pr-5">
+            <input type="text" class="pl-4 outline-none w-full ">
+
+            <div class="flex items-center justify-center">
+                <img src="../images/search.svg" alt="Seach">
+            </div>
+
+
+            
+        </div>
+
+        <!-- Chart example -->
+        <!--  -->
+        <div class="w-4/5 mt-14 h-96 rounded-xl flex items-center flex-col" style="box-shadow: rgba(149, 157, 165, 0.2)0px 8px 24px;">
+
+
+            <div class="w-4/5 h-48 mt-4 flex flex-col">
+                <div class="w-full flex justify-between items-center">
+                    <div class="bar h-3 bg-blue-500 rounded-4xl" data-width="50%"></div>
+                    waa
+                </div>
+                <div class="w-full flex justify-between items-center">
+                    <div class="bar h-3 bg-yellow-500 rounded-4xl" data-width="40%"></div>
+                    waa
+                </div>
+                <div class="w-full flex justify-between items-center">
+                    <div class="bar h-3 bg-red-500 rounded-4xl" data-width="35%"></div>
+                    waa
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+    <aside>
+
+    </aside>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".bar").forEach(bar => {
+                const targetWidth = bar.getAttribute("data-width");
+                bar.style.setProperty("--target-width", targetWidth);
+                bar.classList.add("animated-bar");
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
