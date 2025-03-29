@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="../styles/output.css">
     <link rel="stylesheet" href="../styles/animations.css">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_drop_down" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_drop_down" />
 
     <title>Document</title>
 </head>
@@ -36,41 +37,42 @@
             </div>
 
 
-            
+
         </div>
 
         <!-- Chart example -->
         <!--  -->
-        <div class="w-4/5 mt-14 h-96 rounded-xl flex items-center flex-col" style="box-shadow: rgba(149, 157, 165, 0.2)0px 8px 24px;">
+        <div class="w-4/5 mt-14 h-96 rounded-xl flex items-center flex-col"
+            style="box-shadow: rgba(149, 157, 165, 0.2)0px 8px 24px;">
 
             <!-- Search details -->
-             
-             <div class="w-4/5 mt-4 ">
-                 
-                <!-- Clickable thing -->
-                 <span class="text-gray-600  select-none cursor-pointer flex items-center" id="show-info">
-                     Search info 
-                     <span class="material-symbols-outlined" id="dropdownIcon">
-                         arrow_drop_down
-                        </span>
-                    </span>
-                    
-                    <!-- Default hidden -->
-                    <div class="mt-2 hide" id="searchinfo">
 
-                        <p class="text-gray-500 ">
-                            Searched for: <b> Why moon orange</b>
-                        </p>
-                        
-                        <p class="text-gray-500 ">
-                            Scanned <b> 6 </b> pages
-                        </p>
-                        
-                        <p class="text-gray-500 ">
-                            Found <b> 1458 </b> words
-                        </p>
-                        <hr class="my-4 text-gray-300">
-                    </div>
+            <div class="w-4/5 mt-4 ">
+
+                <!-- Clickable thing -->
+                <span class="text-gray-600  select-none cursor-pointer flex items-center" id="show-info">
+                    Search info
+                    <span class="material-symbols-outlined" id="dropdownIcon">
+                        arrow_drop_down
+                    </span>
+                </span>
+
+                <!-- Default hidden -->
+                <div class="mt-2 hide" id="searchinfo">
+
+                    <p class="text-gray-500 ">
+                        Searched for: <b> Why moon orange</b>
+                    </p>
+
+                    <p class="text-gray-500 ">
+                        Scanned <b> 6 </b> pages
+                    </p>
+
+                    <p class="text-gray-500 ">
+                        Found <b> 1458 </b> words
+                    </p>
+                    <hr class="my-4 text-gray-300">
+                </div>
             </div>
 
 
@@ -90,8 +92,57 @@
                 </div>
             </div>
         </div>
-        
+
     </main>
+
+    <!-- Modal -->
+    <aside class="absolute w-full h-[50rem] z-20 flex items-center justify-center"
+        style="background-color: rgba(0,0,0,0.5);">
+
+        <div class="bg-zinc-200 w-10/12 h-60 rounded-md flex flex-col items-center"
+            style="box-shadow: rgba(19, 17, 15, 0.2)0px 8px 24px;">
+            <div class="bg-[#009879] text-white w-full text-center py-4 rounded-t-md"
+                style="box-shadow: rgba(149, 157, 165, 0.2)0px 8px 24px;">
+                <h2 class="font-bold">Details for [clicked word]</h2>
+            </div>
+
+            <!-- Legend -->
+            <div class="w-full mt-2">
+                <div class=" grid grid-cols-3 text-center font-bold">
+                    <a href="#">Site</a>
+                    <span>Word count</span>
+                    <span>Total %</span>
+                </div>
+            </div>
+
+            <hr class="text-gray-300 w-full">
+
+            <!-- List data -->
+            <div class="w-full">
+
+
+                <div class="py-2 grid grid-cols-3 text-center hover:bg-[#dedfe3] group transition">
+                    <a href="#" class="group-hover:text-[#009879]">Link.com</a>
+                    <span class="group-hover:text-[#009879]">10</span>
+                    <span class="group-hover:text-[#009879]">0.5%</span>
+                </div>
+                <hr class="text-gray-300 w-full">
+
+
+                <div class="py-2 grid grid-cols-3 text-center hover:bg-[#dedfe3] group transition">
+                    <a href="#" class="group-hover:text-[#009879]">Link.com</a>
+                    <span class="group-hover:text-[#009879]">10</span>
+                    <span class="group-hover:text-[#009879]">0.5%</span>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </aside>
+
 
     <footer>
 
@@ -104,7 +155,7 @@
 
 
     <script src="../scripts/utils.js"></script>
-    
+
 </body>
 
 </html>
