@@ -5,3 +5,46 @@
 .animated-bar {
     animation: fillBar 1s ease-out forwards;
 }
+
+
+
+/* Dropdown */
+@keyframes dropdown {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes rotateDown {
+    from {rotate: 0deg;}
+    to {rotate: 180deg;}   
+}
+@keyframes rotateBack {
+    from {rotate: 180deg;}
+    to {rotate: 0deg;}   
+}
+.show {
+    max-height: 300px;
+    transition: max-height 0.3s ease-in;
+    animation: dropdown 0.3s ease-in-out;
+}
+
+
+.hide {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    animation: dropup 0.3s ease-out;
+}
+
+.rotate {
+    animation: rotateDown 0.3s ease-in-out  forwards;
+}
+.rotateBack{
+    animation: rotateBack 0.3s ease-in-out  forwards;
+}
