@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../styles/animations.css">
 
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_drop_down" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <title>Document</title>
 </head>
@@ -78,17 +78,17 @@
 
             <!-- Main chart -->
             <div class="w-4/5 h-48 mt-2 flex flex-col">
-                <div class="w-full flex justify-between items-center">
+                <div class="w-full flex justify-between items-center clickBar" >
                     <div class="bar h-3 bg-blue-500 rounded-4xl" data-width="50%"></div>
-                    waa
+                    lora
                 </div>
-                <div class="w-full flex justify-between items-center">
+                <div class="w-full flex justify-between items-center clickBar" >
                     <div class="bar h-3 bg-yellow-500 rounded-4xl" data-width="40%"></div>
-                    waa
+                    lorem
                 </div>
-                <div class="w-full flex justify-between items-center">
+                <div class="w-full flex justify-between items-center clickBar" >
                     <div class="bar h-3 bg-red-500 rounded-4xl" data-width="35%"></div>
-                    waa
+                    ipsum
                 </div>
             </div>
         </div>
@@ -96,49 +96,54 @@
     </main>
 
     <!-- Modal -->
-    <aside class="absolute w-full h-[50rem] z-20 flex items-center justify-center"
+    <aside class="absolute w-full h-[50rem] z-20  items-center justify-center hidden" id="modal"
         style="background-color: rgba(0,0,0,0.5);">
 
         <div class="bg-zinc-200 w-10/12 h-60 rounded-md flex flex-col items-center"
             style="box-shadow: rgba(19, 17, 15, 0.2)0px 8px 24px;">
-            <div class="bg-[#009879] text-white w-full text-center py-4 rounded-t-md"
+            <div class="bg-[#009879] text-white w-full text-center py-4 rounded-t-md" id="modalHeader"
                 style="box-shadow: rgba(149, 157, 165, 0.2)0px 8px 24px;">
                 <h2 class="font-bold">Details for [clicked word]</h2>
+                <!-- <span class="material-symbols-outlined absolute right-10">
+                    close
+                    </span> -->
             </div>
+            <div class="w-full" id="modalData">
 
-            <!-- Legend -->
-            <div class="w-full mt-2">
-                <div class=" grid grid-cols-3 text-center font-bold">
-                    <a href="#">Site</a>
-                    <span>Word count</span>
-                    <span>Total %</span>
+                <!-- Legend -->
+                <div class="w-full mt-2">
+                    <div class=" grid grid-cols-3 text-center font-bold">
+                        <a href="#" id="legendone">Site</a>
+                        <span id="legendtwo">Word count</span>
+                        <span id="legendthree">Total %</span>
+                    </div>
                 </div>
-            </div>
-
-            <hr class="text-gray-300 w-full">
-
-            <!-- List data -->
-            <div class="w-full">
-
-
-                <div class="py-2 grid grid-cols-3 text-center hover:bg-[#dedfe3] group transition">
-                    <a href="#" class="group-hover:text-[#009879]">Link.com</a>
-                    <span class="group-hover:text-[#009879]">10</span>
-                    <span class="group-hover:text-[#009879]">0.5%</span>
-                </div>
+                
                 <hr class="text-gray-300 w-full">
-
-
-                <div class="py-2 grid grid-cols-3 text-center hover:bg-[#dedfe3] group transition">
-                    <a href="#" class="group-hover:text-[#009879]">Link.com</a>
-                    <span class="group-hover:text-[#009879]">10</span>
-                    <span class="group-hover:text-[#009879]">0.5%</span>
+                
+                <!-- List data -->
+                <div class="w-full">
+                    
+                    
+                    <div class="py-2 grid grid-cols-3 text-center hover:bg-[#dedfe3] group transition">
+                        <a href="#" class="group-hover:text-[#009879]">Link.com</a>
+                        <span class="group-hover:text-[#009879]">10</span>
+                        <span class="group-hover:text-[#009879]">0.5%</span>
+                    </div>
+                    <hr class="text-gray-300 w-full">
+                    
+                    
+                    <div class="py-2 grid grid-cols-3 text-center hover:bg-[#dedfe3] group transition">
+                        <a href="#" class="group-hover:text-[#009879]">Link.com</a>
+                        <span class="group-hover:text-[#009879]">10</span>
+                        <span class="group-hover:text-[#009879]">0.5%</span>
+                    </div>
                 </div>
+                
+                
             </div>
-
-
-
-
+                
+                
         </div>
 
     </aside>
@@ -155,6 +160,7 @@
 
 
     <script src="../scripts/utils.js"></script>
+    <script src="../scripts/modal.js"></script>
 
 </body>
 
