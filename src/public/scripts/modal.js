@@ -27,6 +27,7 @@ function showModal(e, d, h, c, p) {
     `
 
     payload.push(row)
+    console.log(row)
     c.forEach(element => {
         const row = `
                     <div class="py-2 grid grid-cols-3 text-center hover:bg-[#dedfe3] group transition">
@@ -36,9 +37,9 @@ function showModal(e, d, h, c, p) {
                     </div>
                     `
         payload.push(row)
+        console.log(row)
     });
-
-    s.innerHTML = payload
+    s.innerHTML = payload.join("")
 
 
     // Show modal
