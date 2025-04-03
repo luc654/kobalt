@@ -27,7 +27,6 @@ function showModal(e, d, h, c, p) {
     `
 
     payload.push(row)
-    console.log(row)
     c.forEach(element => {
         const row = `
                     <div class="py-2 grid grid-cols-3 text-center hover:bg-[#dedfe3] group transition">
@@ -37,7 +36,6 @@ function showModal(e, d, h, c, p) {
                     </div>
                     `
         payload.push(row)
-        console.log(row)
     });
     s.innerHTML = payload.join("")
 
@@ -66,5 +64,23 @@ function addListeners(e, c, h, d){
     });
 }
 
+function closeModal(e, t, i, y){
+    if(t){
+        if(i !== y){
+            return
+        }
+    }
+    const r = document.getElementById(e).classList.add('hidden')
+}
+
+
+
+document.getElementById('modal').addEventListener('click', (event) => {
+        closeModal('modal', true, event.originalTarget.id, 'modal')
+})
+
+document.getElementById('closeModalBtn').addEventListener('click', () => {
+    closeModal('modal')
+})
 
 addListeners('.clickBar', '#009879', ['T', 'E', "ST"], [["Lora", [["Test", "Data", "Real"]]]])
