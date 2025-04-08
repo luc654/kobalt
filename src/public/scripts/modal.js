@@ -84,3 +84,20 @@ document.getElementById('closeModalBtn').addEventListener('click', () => {
 })
 
 addListeners('.clickBar', '#009879', ['T', 'E', "ST"], [["Lora", [["Test", "Data", "Real"]]]])
+
+
+
+document.querySelectorAll('.button').forEach(button => {
+    button.addEventListener('click', (e) => {
+        var buttonId = e.target.id;
+        console.log(buttonId);
+        document.getElementById('modal-container').classList = [buttonId];
+        document.querySelector('body').classList.add('modal-active')
+    });
+});
+
+document.getElementById('modal-container').addEventListener("click", (e) => {
+    console.log("haaa");
+    e.target.classList.add("out");
+    document.querySelector('body').classList.remove('modal-active');
+});
